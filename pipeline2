@@ -1,5 +1,7 @@
 
 pipeline {
+  properties([parameters([booleanParam(defaultValue: true, description: '', name: 'is_bool'), string(defaultValue: 'Hello', description: '', name: 'is_string', trim: false)])])
+
   agent any
   stages {
     stage('CheckOut') {
